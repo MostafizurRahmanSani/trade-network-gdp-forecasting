@@ -1,0 +1,1 @@
+{"test_MAE": 0.03495972603559494, "best_epoch_A": 102, "epochs_refit": 103, "check_stepA_vs_saved_maxabs": 0.0, "testA_MAE": 0.03533162549138069, "sec": 55.506641149520874}
