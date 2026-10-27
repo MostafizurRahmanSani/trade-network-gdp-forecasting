@@ -51,7 +51,7 @@ The remaining stages (baselines, extended tuning, graph controls, ablation, roll
 
 ## Data
 
-The raw inputs are public: CEPII BACI (HS92, release V202601), the World Bank World Development Indicators and the IMF World Economic Outlook historical forecasts. The processed panel and edge files, the country files and the IMF file are in the repository, so all models and reports run from them. The raw downloads (`data/raw`: BACI and the World Bank extract) and the product-group aggregates (`data/interim`) are kept locally and are git-ignored; `data/README.md` describes the sources, their licences and the steps to rebuild the processed files from them.
+The raw inputs are public: CEPII BACI (HS92, release V202601), the World Bank World Development Indicators and the IMF World Economic Outlook historical forecasts. The processed panel and edge files, the country files and the IMF file are in the repository, so all models and reports run from them. The World Bank extract is included (`data/raw/wdi`). The raw BACI files (8 GB) and the product-group aggregates (`data/interim`) are not part of the repository and must be downloaded from CEPII if the processed files are to be rebuilt from scratch; `data/README.md` describes the sources, their licences and the steps to rebuild the processed files from them.
 
 ## Reproducibility details
 

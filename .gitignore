@@ -22,7 +22,8 @@ logs/
 logs_*.txt
 
 # Raw downloads: kept locally, not pushed to GitHub (see data/README.md)
-data/raw/
+data/raw/*
+!data/raw/wdi/
 data/interim/
 
 # LaTeX build files
