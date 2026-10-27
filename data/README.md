@@ -24,7 +24,7 @@ raw/baci/         the raw BACI yearly files BACI_HS92_Y<year>_V202601.csv, 8 GB 
 
 ## Rebuilding the processed files
 
-1. (Optional) download the raw BACI files from CEPII into `raw/baci/` and run `python scripts/01_aggregate_baci.py`; it writes `interim/`.
+1. (Optional) the raw BACI files are about 8 GB, too large for GitHub, so they are not included. Download them from CEPII (http://www.cepii.fr/CEPII/en/bdd_modele/bdd_modele_item.asp?id=37, HS92, release V202601) into `raw/baci/` and run `python scripts/01_aggregate_baci.py`; it writes `interim/`.
 2. `python scripts/02_build_panel.py` builds `processed/` from `interim/` and the World Bank extract (rebuilt locally, the files are identical in content to the ones included).
 
 All models and reports run from `processed/` (and `processed_ext/`, `external/`) alone; `raw/baci/` and `interim/` are needed only for step 1, and `raw/wdi/` (included) for step 2 and by `62_imputation_report.py` and `63_imputation_lookahead.py`).
