@@ -75,7 +75,7 @@ def summary(l, h, alpha):
 
 
 md = ["# Conformal post-hoc analyses on saved CP-protocol forecasts (no refitting)", "",
-      "CP protocol: training targets <= 2012, early stopping 2013-2014, calibration 2015-2017, test 2018-2024. Bootstrap: 5,000 resamples of the 7 test years (90% percentile interval).", "",
+      "CP protocol: training targets <= 2012, early stopping 2013-2014, calibration 2015-2017, test 2018-2024. Bootstrap: 5,000 resamples of the 7 test years (90% percentile interval).", "", 'Note: this file recomputes split-CP coverage from the saved forecasts with its own code (scripts/68_conformal_posthoc.py). Its STGNN split-CP numbers differ slightly from outputs/conformal_results.md (overall coverage 0.788 vs 0.786; high-volatility tercile 0.719 vs 0.714), although both use the five-seed STGNN mean. The paper and the reply to the reviewers quote conformal_results.md (scripts/44_conformal_prediction.py).', "",
       "## A. Point accuracy of the CP-protocol forecasts", "", "| Model | early-stopping MAE 2013-14 | calibration MAE 2015-17 | test MAE 2018-24 |", "|---|---|---|---|"]
 for k, v in pts.items():
     md.append(f"| {k} | {v.get('es', float('nan')):.5f} | {np.abs(v['cal'] - Y['cal']).mean():.5f} | {np.abs(v['test'] - Y['test']).mean():.5f} |")
